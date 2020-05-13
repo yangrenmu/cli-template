@@ -15,9 +15,7 @@ module.exports = {
     config.resolve.alias.set('@', resolve('src'))
     // 全局引用less  全局变量/全局函数(flex等)
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
-    types.forEach(type =>
-      addStyleResource(config.module.rule('less').oneOf(type))
-    )
+    types.forEach(type => addStyleResource(config.module.rule('less').oneOf(type)))
   },
   css: {
     loaderOptions: {
