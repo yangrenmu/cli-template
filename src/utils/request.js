@@ -3,7 +3,6 @@ import Vue from 'vue'
 import { Toast } from 'vant'
 import qs from 'qs'
 import { BASE_URL } from './config'
-import { queryString } from './utils'
 
 Vue.use(Toast)
 
@@ -29,13 +28,6 @@ const errorHandle = status => {
 }
 
 export const ApplicationJson = 'application/json'
-export const ApplicationFormURLEncoded = 'application/x-www-form-urlencoded'
-export const MultipartFormData = 'multipart/form-data'
-
-const { token = '' } = queryString()
-if (token) {
-  localStorage.setItem('token', token)
-}
 
 // 新建了一个 axios 实例
 const request = axios.create({

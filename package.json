@@ -1,10 +1,11 @@
 {
-  "name": "cli-template",
-  "version": "0.1.0",
+  "name": "name",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "serve": "cross-env VUE_APP_ENV=development vue-cli-service serve",
+    "buildTest": "cross-env VUE_APP_ENV=test vue-cli-service build",
+    "buildRes": "cross-env VUE_APP_ENV=production vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -25,6 +26,7 @@
     "amfe-flexible": "^2.2.1",
     "babel-eslint": "^10.1.0",
     "babel-plugin-import": "^1.13.0",
+    "cross-env": "^7.0.2",
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-vue": "^6.2.2",

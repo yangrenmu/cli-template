@@ -1,2 +1,2 @@
 import http from '@/utils/request'
-export const getOpenCityAPI = params => http.get('xxx', { params })
+export const getTestAPI = params => http.get('test', { params })
